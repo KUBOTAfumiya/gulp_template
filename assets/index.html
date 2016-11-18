@@ -4,49 +4,56 @@
 <head>
   <meta charset="utf-8">
 
-  <title>title</title>
+  <title>ƒ^ƒCƒgƒ‹</title>
   <meta name="description" content="">
   <meta name="author" content="">
+  
+  <script
+  			  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  			  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  			  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
 
-  <!-- <link rel="stylesheet" href="css/index.css\"> -->
-  <!-- <script src="js/index.js"></script> -->
 </head>
 
 <body>
   <h1>Hello World</h1>
+  <p id="output"></p>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mockjax/1.6.2/jquery.mockjax.min.js"></script>
+<script src="/js/index.js"></script>
 <script>
 <!-- 
 $.mockjax(
     {
         url: '/api.do',
-        responseTime: 500,
-        response: function(settings) {
-            if(settings.data.param1) {
-                this.responseText = {
-                  "result": "1",
-                	"errors":[
-                		{	
-                			"code": "E_01",
-                			"message": "Lack of parameters"
-                		}
-                	]
-                };
-                return;
-            }
-            // Failure with 1/10
-            if(Math.random() * 10 < 1) {
-                this.status = 404;
-                return;
-            }
-            //default
-            this.responseText = {
-                "result": "0",
-                "count1": "" + Math.floor( Math.random() * 1000 ),
-                "count2": "" + Math.floor( Math.random() * 1000 )
-            };
-          }
+        responseTime: 1000,
+        type: 'get',
+        status: 200,
+        proxy: '/api/item/success.json'
+        // response: function(settings) {
+        //     if(!settings.data) {
+        //         this.responseText = {
+        //           "result": "1",
+        //         	"errors":[
+        //         		{	
+        //         			"code": "E_01",
+        //         			"message": "Lack of parameters"
+        //         		}
+        //         	]
+        //         };
+        //         return;
+        //     }
+        //     // Failure with 1/10
+        //     if(Math.random() * 10 < 1) {
+        //         this.status = 404;
+        //         return;
+        //     }
+        //     //default
+        //     this.responseText = {
+        //         "result": "0",
+        //         "text": "mockjax success!!"
+        //     };
+        //   }
     }
 );
 -->

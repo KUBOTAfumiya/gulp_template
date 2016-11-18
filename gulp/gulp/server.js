@@ -5,14 +5,8 @@ const gulp = require('gulp');
 gulp.task('server', () => {
   gulp.src(__CONFIG.dist)
     .pipe($.webserver({
-      port: 3000,
-      livereload: true,
-      // fallback: 'index.html',
-      // open: true,
-      proxies: [{
-        source: '/api',
-        target: 'http://localhost:9000/api'
-      }]
+      port: 4000,
+      livereload: true
     }));
 });
 

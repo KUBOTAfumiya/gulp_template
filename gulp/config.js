@@ -15,9 +15,7 @@ module.exports = {
           from: ['../assets/**/*',
                 '!../assets/**/*.jpg',
                 '!../assets/**/*.gif',
-                '!../assets/**/*.png',
-                '!../assets/**/jquery.ui.datepicker-ja.min.js',
-                '!../assets/**/jquery-ui.js'
+                '!../assets/**/*.png'
               ],
           to: 'dist/'
         }
@@ -26,21 +24,15 @@ module.exports = {
         {
           from: ['../assets/**/*.jpg',
                 '../assets/**/*.gif',
-                '../assets/**/*.png',
-                '../assets/**/jquery.ui.datepicker-ja.min.js',
-                '../assets/**/jquery-ui.js'
+                '../assets/**/*.png'
               ],
           to: 'dist/'
         }
       ],
       watch: [
         {
-          from: '../assets/ab/activity/top/sp/**/*',
-          to: 'dist/ab/activity/top/sp/'
-        },
-        {
-          from: '../assets/htmlmock/activity/sp/**/*',
-          to: 'dist/htmlmock/activity/sp/'
+          from: '../assets/**/*',
+          to: 'dist/'
         }
       ]
     }
