@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>ƒ^ƒCƒgƒ‹</title>
+  <title>ï¿½^ï¿½Cï¿½gï¿½ï¿½</title>
   <meta name="description" content="">
   <meta name="author" content="">
   
@@ -23,37 +23,37 @@
 <script src="/js/index.js"></script>
 <script>
 <!-- 
+var successJson;
+$.getJSON('/api/item/success.json', function(json){
+  successJson = json;
+});
 $.mockjax(
     {
         url: '/api.do',
         responseTime: 1000,
         type: 'get',
         status: 200,
-        proxy: '/api/item/success.json'
-        // response: function(settings) {
-        //     if(!settings.data) {
-        //         this.responseText = {
-        //           "result": "1",
-        //         	"errors":[
-        //         		{	
-        //         			"code": "E_01",
-        //         			"message": "Lack of parameters"
-        //         		}
-        //         	]
-        //         };
-        //         return;
-        //     }
-        //     // Failure with 1/10
-        //     if(Math.random() * 10 < 1) {
-        //         this.status = 404;
-        //         return;
-        //     }
-        //     //default
-        //     this.responseText = {
-        //         "result": "0",
-        //         "text": "mockjax success!!"
-        //     };
-        //   }
+        response: function(settings) {
+            if(!settings.data) {
+                this.responseText = {
+                  "result": "1",
+                	"errors":[
+                		{	
+                			"code": "E_01",
+                			"message": "Lack of parameters"
+                		}
+                	]
+                };
+                return;
+            }
+            // Failure with 1/10
+            if(Math.random() * 10 < 1) {
+                this.status = 404;
+                return;
+            }
+            //default
+            this.responseText = successJson || {};
+          }
     }
 );
 -->
