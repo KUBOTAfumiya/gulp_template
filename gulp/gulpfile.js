@@ -7,7 +7,8 @@ global.$ = tasks.plugins;
 
 
 gulp.task('build', (callback) => {
-  return runSequence(['copy', 'copyimg'], callback);
+  // return runSequence(['copy', 'pug', 'script'], callback);
+  return runSequence(['copy', 'pug'], callback);
 });
 
 gulp.task('dist', (callback) => {
@@ -17,5 +18,4 @@ gulp.task('dist', (callback) => {
 
 gulp.task('default', ['clean'], () => {
   return runSequence('build', 'server', 'watch');
-  // return runSequence('build', 'server');
 });

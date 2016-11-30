@@ -6,11 +6,11 @@ gulp.task('watch', () => {
   const copyWatches = [];
   if (__CONFIG.path.watch) {
     __CONFIG.path.watch.forEach((src) => { copyWatches.push(src.from); });
-    gulp.watch(copyWatches, ['watchcopy']);
+    gulp.watch(copyWatches, ['copy']);
   }
 });
 
-gulp.task('watchcopy', () => {
+gulp.task('sjisWatch', () => {
   const files = __CONFIG.path.watch;
   const stream = ms();
   files.forEach((file) => {
