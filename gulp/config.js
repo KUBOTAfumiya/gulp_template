@@ -34,6 +34,7 @@ module.exports = {
           from: '../assets/**/*',
           to: 'dist/'
         }
+
       ]
     }
 };
