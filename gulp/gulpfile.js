@@ -7,8 +7,8 @@ global.$ = tasks.plugins;
 
 
 gulp.task('build', (callback) => {
-  // return runSequence(['copy', 'pug', 'script'], callback);
-  return runSequence(['copy', 'pug'], callback);
+  return runSequence(['copy', 'pug', 'script'], callback);
+  // return runSequence(['copy', 'pug'], callback);
 });
 
 gulp.task('dist', (callback) => {

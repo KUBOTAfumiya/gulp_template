@@ -6,7 +6,7 @@ gulp.task('watch', () => {
   const copyWatches = [];
   if (__CONFIG.path.watch) {
     __CONFIG.path.watch.forEach((src) => { copyWatches.push(src.from); });
-    gulp.watch(copyWatches, ['copy']);
+    gulp.watch(copyWatches, ['copy', 'watchScript']);
   }
 });
 

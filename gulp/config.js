@@ -14,13 +14,15 @@ module.exports = {
     copy: [{
       from: ['../assets/**/*.jpg',
         '../assets/**/*.gif',
-        '../assets/**/*.png'
+        '../assets/**/*.png',
+        '../assets/**/*.json',
       ],
       to: 'dist/'
-    }],
+    }
+  ],
     js: {
-      src: '../assets/**/*.js',
-      dest: 'dist/'
+      src: '../assets/js/*.js',
+      dest: 'dist/js/'
     },
     pug: {
       src: '../assets/**/*.pug',

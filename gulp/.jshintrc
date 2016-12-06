@@ -6,7 +6,8 @@
 
   "globals": {
     "$": false,
-    "__CONFIG": false
+    "__CONFIG": false,
+    "-": false
   },
 
   "asi": false,
