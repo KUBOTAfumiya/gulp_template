@@ -2,14 +2,11 @@ require('jquery');
 window.mockjax = require('jquery-mockjax')(jquery, window);
 
 $(function() {
-  var param = {
-    'param1': 'test'
-  };
   $.ajax({
       url: '/restful/api',
       dataType: 'json',
       type: 'GET',
-      data: param
+      data: {'param1': 'test'}
     })
     .then(
       function(data) {

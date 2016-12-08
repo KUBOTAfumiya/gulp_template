@@ -7,8 +7,8 @@ html(lang="ja")
   body
     p #{text}
     p#output
-  script.
-    mockjax({
-      url: '/restful/api',
-      proxy: '#{api}'
-    });
+    script.
+      mockjax({
+        url: '/restful/api',
+        proxy: '#{api}'
+      });

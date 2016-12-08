@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 var pug = require('gulp-pug');
-// var data = require('gulp-data');
 var fm = require('gulp-front-matter');
 
 gulp.task('pug', () => {
