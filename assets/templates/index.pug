@@ -1,0 +1,16 @@
+---
+title: success
+list: 
+  - success.html
+  - error.html
+---
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    title index
+  body
+    ul
+      each val in list
+        li
+          a(href= val)= val

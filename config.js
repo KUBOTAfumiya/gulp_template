@@ -12,24 +12,24 @@ module.exports = {
   path: {
     sjiscopy: [],
     copy: [{
-      from: ['../assets/**/*.jpg',
-        '../assets/**/*.gif',
-        '../assets/**/*.png',
-        '../assets/**/*.json',
+      from: ['assets/**/*.jpg',
+        'assets/**/*.gif',
+        'assets/**/*.png',
+        'assets/**/*.json',
       ],
       to: 'dist/'
     }
   ],
     js: {
-      src: '../assets/js/*.js',
+      src: 'assets/js/*.js',
       dest: 'dist/js/'
     },
     pug: {
-      src: '../assets/**/*.pug',
+      src: 'assets/templates/*.pug',
       dest: 'dist/'
     },
     watch: [{
-      from: '../assets/**/*',
+      from: 'assets/**/*',
       to: 'dist/'
     }]
   }
